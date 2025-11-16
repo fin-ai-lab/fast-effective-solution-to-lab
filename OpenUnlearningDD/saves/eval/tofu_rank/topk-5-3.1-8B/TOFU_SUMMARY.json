@@ -1,0 +1,8 @@
+{
+    "exact_memorization": 0.5089465795457363,
+    "extraction_strength": 0.05261093970795871,
+    "forget_Q_A_PARA_Prob": 0.0026067704684101045,
+    "forget_Q_A_gibberish": 0.8257420710287988,
+    "forget_truth_ratio": 0.009955508258185444,
+    "model_utility": 0.6104103518100331
+}

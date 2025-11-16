@@ -1,0 +1,5 @@
+{
+    "forget_knowmem_ROUGE": 0.30729475051280325,
+    "forget_verbmem_ROUGE": 0.21710189607851388,
+    "retain_knowmem_ROUGE": 0.3675734551079326
+}

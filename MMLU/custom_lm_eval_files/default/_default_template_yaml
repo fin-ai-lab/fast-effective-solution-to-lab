@@ -1,0 +1,27 @@
+dataset_path: cais/mmlu
+test_split: test
+output_type: generate_until
+doc_to_text: "Given the following problem, reason and give a final answer to the problem. {{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\nD. {{choices[3]}}\n Your response should end with \"The answer is [answer].\" where [answer] is the response to the problem.\n Let's think step by step:"
+doc_to_target: "{{['A', 'B', 'C', 'D'][answer]}}"
+num_fewshot: 0
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+filter_list:
+  - name: "strict-match"
+    filter:
+      - function: "regex"
+        regex_pattern: '(?<=The answer is )([A-D])'
+      - function: "take_first"
+  - name: "flexible-extract"
+    filter:
+      - function: "regex"
+        regex_pattern: '([A-D])\.?'
+      - function: "take_last"
+metadata:
+  version: 1.0
+dataset_kwargs:
+  trust_remote_code: true

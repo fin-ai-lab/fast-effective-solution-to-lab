@@ -1,0 +1,20 @@
+{
+  "dd_2": {
+    "total_runs": 30,
+    "dal_count": 30,
+    "dal_rate": 1.0,
+    "luv_count": 21,
+    "luv_rate": 0.7,
+    "ual_count": 15,
+    "ual_rate": 0.5
+  },
+  "dk_250": {
+    "total_runs": 30,
+    "dal_count": 27,
+    "dal_rate": 0.9,
+    "luv_count": 9,
+    "luv_rate": 0.3,
+    "ual_count": 22,
+    "ual_rate": 0.7333333333333333
+  }
+}
